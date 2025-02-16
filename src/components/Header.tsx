@@ -34,7 +34,7 @@ const Header = () => {
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 onClick={(e) => handleNavClick(e, item)}
-                className="text-gray-600 hover:text-primary transition-colors nav-link"
+                className="text-gray-600 hover:text-primary transition-colors"
               >
                 {item}
               </a>
@@ -53,20 +53,24 @@ const Header = () => {
           </button>
         </div>
 
-        {isMenuOpen && (
-          <div className="md:hidden pb-4">
-            {menuItems.map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                onClick={(e) => handleNavClick(e, item)}
-                className="block py-2 text-gray-600 hover:text-primary transition-colors"
-              >
-                {item}
-              </a>
-            ))}
-          </div>
-        )}
+        {/* Container do menu mobile com animação suave */}
+        <div
+          className={`
+            md:hidden overflow-hidden transition-all duration-300 ease-out
+            ${isMenuOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}
+          `}
+        >
+          {menuItems.map((item) => (
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              onClick={(e) => handleNavClick(e, item)}
+              className="block py-2 text-gray-600 hover:text-primary transition-colors"
+            >
+              {item}
+            </a>
+          ))}
+        </div>
       </div>
     </header>
   );

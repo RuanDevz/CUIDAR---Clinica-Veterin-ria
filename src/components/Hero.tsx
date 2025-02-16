@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, Clock, Instagram, PawPrint, MapPin } from 'lucide-react';
+import Background from '../../src/assets/Papel.jpg'
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
@@ -11,7 +12,7 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center"
       style={{
-        backgroundImage: `url("https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?ixlib=rb-4.0.3")`,
+        backgroundImage: `url(${Background})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
