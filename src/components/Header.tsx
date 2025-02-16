@@ -53,7 +53,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Container do menu mobile com animação suave */}
         <div
           className={`
             md:hidden overflow-hidden transition-all duration-300 ease-out
