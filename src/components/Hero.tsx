@@ -4,7 +4,7 @@ import Background from '../../src/assets/Papel.jpg'
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/83933369925', '_blank');
+    window.open('https://wa.me/558333369925', '_blank');
   };
 
   return (
